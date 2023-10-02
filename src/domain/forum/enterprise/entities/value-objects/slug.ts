@@ -1,4 +1,4 @@
-export default class Slug {
+export class Slug {
   public value: string
 
   private constructor(value: string) {

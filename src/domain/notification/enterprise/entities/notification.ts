@@ -1,5 +1,5 @@
-import Entity from '@/core/entities/entity'
-import UniqueEntityId from '@/core/entities/unique-entity-id'
+import { Entity } from '@/core/entities/entity'
+import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 import { Optional } from '@/core/types/optional'
 
 export interface NotificationProps {
@@ -10,7 +10,7 @@ export interface NotificationProps {
   createdAt: Date
 }
 
-export default class Notification extends Entity<NotificationProps> {
+export class Notification extends Entity<NotificationProps> {
   get recipientId() {
     return this.props.recipientId
   }

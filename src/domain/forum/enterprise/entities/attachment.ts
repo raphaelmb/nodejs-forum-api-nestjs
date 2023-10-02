@@ -1,12 +1,12 @@
-import Entity from '@/core/entities/entity'
-import UniqueEntityId from '@/core/entities/unique-entity-id'
+import { Entity } from '@/core/entities/entity'
+import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 
 interface AttachmentProps {
   title: string
   link: string
 }
 
-export default class Attachment extends Entity<AttachmentProps> {
+export class Attachment extends Entity<AttachmentProps> {
   get title() {
     return this.props.title
   }

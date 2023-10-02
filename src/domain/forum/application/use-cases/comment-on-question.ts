@@ -1,9 +1,9 @@
-import UniqueEntityId from '@/core/entities/unique-entity-id'
 import { QuestionsRepository } from '../repositories/questions-repository'
-import QuestionComment from '../../enterprise/entities/question-comment'
+import { QuestionComment } from '../../enterprise/entities/question-comment'
 import { QuestionCommentsRepository } from '../repositories/question-comments-repository'
 import { Either, left, right } from '@/core/either'
-import ResourceNotFoundError from '@/core/errors/errors/resource-not-found-error'
+import { UniqueEntityId } from '@/core/entities/unique-entity-id'
+import { ResourceNotFoundError } from '@/core/errors/errors/resource-not-found-error'
 
 interface CommentOnQuestionUseCaseRequest {
   authorId: string
@@ -18,7 +18,7 @@ type CommentOnQuestionUseCaseResponse = Either<
   }
 >
 
-export default class CommentOnQuestionUseCase {
+export class CommentOnQuestionUseCase {
   constructor(
     readonly questionsRepository: QuestionsRepository,
     readonly questionCommentsRepository: QuestionCommentsRepository,

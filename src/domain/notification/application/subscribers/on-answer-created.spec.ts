@@ -1,10 +1,11 @@
 import { makeAnswer } from 'test/factories/make-answer'
-import OnAnswerCreadted from './on-answer-created'
+import { OnAnswerCreadted } from './on-answer-created'
 import { InMemoryAnswersRepository } from 'test/repositories/in-memory-answers-repository'
 import { InMemoryAnswerAttachmentsRepository } from 'test/repositories/in-memory-answer-attachments-repository'
 import { InMemoryQuestionsRepository } from 'test/repositories/in-memory-questions-repository'
 import { InMemoryQuestionAttachmentsRepository } from 'test/repositories/in-memory-question-attachments-repository'
-import SendNotificationUseCase, {
+import {
+  SendNotificationUseCase,
   SendNotificationUseCaseRequest,
   SendNotificationUseCaseResponse,
 } from '../use-cases/send-notification'

@@ -1,9 +1,9 @@
-import UniqueEntityId from '@/core/entities/unique-entity-id'
-import Answer from '../../enterprise/entities/answer'
-import AnswersRepository from '../repositories/answers-repository'
+import { UniqueEntityId } from '@/core/entities/unique-entity-id'
+import { Answer } from '../../enterprise/entities/answer'
+import { AnswersRepository } from '../repositories/answers-repository'
 import { Either, right } from '@/core/either'
-import AnswerAttachmentList from '../../enterprise/entities/answer-attachment-list'
-import AnswerAttachment from '../../enterprise/entities/answer-attachment'
+import { AnswerAttachment } from '../../enterprise/entities/answer-attachment'
+import { AnswerAttachmentList } from '../../enterprise/entities/answer-attachment-list'
 
 interface AnswerQuestionUseCaseRequest {
   instructorId: string
@@ -14,7 +14,7 @@ interface AnswerQuestionUseCaseRequest {
 
 type AnswerQuestionUseCaseResponse = Either<null, { answer: Answer }>
 
-export default class AnswerQuestionUseCase {
+export class AnswerQuestionUseCase {
   constructor(readonly answersRepository: AnswersRepository) {}
 
   async execute({

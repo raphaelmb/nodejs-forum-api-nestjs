@@ -1,8 +1,8 @@
-import UniqueEntityId from '@/core/entities/unique-entity-id'
 import { Optional } from '@/core/types/optional'
-import AnswerAttachmentList from './answer-attachment-list'
+import { AnswerAttachmentList } from './answer-attachment-list'
 import { AggregateRoot } from '@/core/entities/aggregate-root'
-import AnswerCreatedEvent from '../events/answer-created-event'
+import { UniqueEntityId } from '@/core/entities/unique-entity-id'
+import { AnswerCreatedEvent } from '../events/answer-created-event'
 
 export interface AnswerProps {
   authorId: UniqueEntityId
@@ -13,7 +13,7 @@ export interface AnswerProps {
   updatedAt?: Date
 }
 
-export default class Answer extends AggregateRoot<AnswerProps> {
+export class Answer extends AggregateRoot<AnswerProps> {
   get content() {
     return this.props.content
   }

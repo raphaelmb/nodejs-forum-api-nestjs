@@ -18,7 +18,7 @@ type AuthenticateStudentUseCaseResponse = Either<
 >
 
 @Injectable()
-export default class AuthenticateStudentUseCase {
+export class AuthenticateStudentUseCase {
   constructor(
     readonly studentsRepository: StudentsRepository,
     readonly hashComparer: HashComparer,
