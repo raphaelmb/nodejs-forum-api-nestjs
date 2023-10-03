@@ -20,7 +20,7 @@ export class PrismaStudentsRepository implements StudentsRepository {
 
   async create(student: Student): Promise<void> {
     const data = PrismaStudentMapper.toPrisma(student)
-    this.prisma.user.create({
+    await this.prisma.user.create({
       data,
     })
   }
